@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 import 'package:hackathon/pages/home_page.dart';
 import 'package:hackathon/pages/signup.dart';
 
@@ -27,43 +26,17 @@ class _LoginPage extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
+                    padding:
+                        const EdgeInsets.only(top: 20, left: 20, right: 20),
                     child: Image.asset(
-                  "assets/gif.gif",
-                  fit: BoxFit.contain,
-                )),
+                      "assets/gif.gif",
+                      fit: BoxFit.contain,
+                    )),
                 Stack(
                   children: [
-                    // Container(
-                    //     padding: const EdgeInsets.fromLTRB(15.0, 110, 00, 0),
-                    //     child: const Text(
-                    //       "Hello",
-                    //       style: TextStyle(
-                    //           fontSize: 80.0,
-                    //           fontWeight: FontWeight.bold,
-                    //           color: Colors.black),
-                    //     )),
-                    // Container(
-                    //     padding: const EdgeInsets.fromLTRB(16, 175, 00, 0),
-                    //     child: const Text(
-                    //       "There",
-                    //       style: TextStyle(
-                    //           fontSize: 80.0,
-                    //           fontWeight: FontWeight.bold,
-                    //           color: Colors.black),
-                    //     )),
-                    // Container(
-                    //     padding: const EdgeInsets.fromLTRB(220.0, 175, 00, 0),
-                    //     child: const Text(
-                    //       ".",
-                    //       style: TextStyle(
-                    //           fontSize: 80.0,
-                    //           fontWeight: FontWeight.bold,
-                    //           color: Colors.green),
-                    //     )),
-
                     Container(
                       padding:
-                          const EdgeInsets.only(top: 335, left: 20, right: 20),
+                          const EdgeInsets.only(top: 75, left: 20, right: 20),
                       child: Column(
                         children: <Widget>[
                           TextFormField(

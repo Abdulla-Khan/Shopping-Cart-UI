@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/constants/data.dart';
 import 'package:hackathon/pages/home_page.dart';
-
-import 'detail_page.dart';
 
 class CartScreen extends StatefulWidget {
   @override

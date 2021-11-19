@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/constants/data.dart';
 import 'package:hackathon/pages/home_page.dart';
 
-import 'detail_page.dart';
-
 class FavScreen extends StatefulWidget {
   final ShoeModel shoeModel;
   FavScreen(this.shoeModel);

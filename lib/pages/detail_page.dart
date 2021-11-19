@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:hackathon/pages/home_page.dart';
 
 import '../constants/clipper.dart';
 import '../constants/const.dart';

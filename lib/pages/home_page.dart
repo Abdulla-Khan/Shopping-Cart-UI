@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: customDrawer(),
+      drawer: CustomDrawer(),
       appBar: AppBar(
         actions: [
           IconButton(

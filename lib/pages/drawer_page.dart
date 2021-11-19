@@ -3,7 +3,7 @@ import 'package:hackathon/pages/home_page.dart';
 import 'package:hackathon/pages/login.dart';
 import 'package:hackathon/pages/profile_screen.dart';
 
-class customDrawer extends StatelessWidget {
+class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(

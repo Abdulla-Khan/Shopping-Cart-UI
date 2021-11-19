@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 
 import '../constants/const.dart';
@@ -30,7 +32,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: _scaffoldkey,
-        drawer: customDrawer(),
+        drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: Column(
             children: [
