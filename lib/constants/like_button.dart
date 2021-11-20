@@ -12,8 +12,7 @@ class _LikeButtonsState extends State<LikeButtons> {
 
   void like() {
     setState(() {
-      bgColor = bgColor == Colors.white ? Colors.red : Colors.white;
-      heartColor = heartColor == Colors.grey ? Colors.white : Colors.grey;
+      heartColor = heartColor == Colors.grey ? Colors.red : Colors.grey;
     });
   }
 
@@ -25,7 +24,7 @@ class _LikeButtonsState extends State<LikeButtons> {
         backgroundColor: bgColor,
         radius: 18,
         child: Icon(
-          Icons.favorite_outline,
+          Icons.favorite,
           color: heartColor,
           size: 18,
         ),
