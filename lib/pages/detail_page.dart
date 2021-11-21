@@ -14,8 +14,6 @@ class DetailPage extends StatefulWidget {
   _DetailPageState createState() => _DetailPageState();
 }
 
-List l = [];
-
 class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
@@ -183,15 +181,10 @@ class _DetailPageState extends State<DetailPage> {
                 Radius.circular(50),
               ),
             ),
-            child: GestureDetector(
-              onTap: () {
-                l.add(index);
-              },
-              child: Text(
-                "ADD CART",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+            child: Text(
+              "ADD CART",
+              style: TextStyle(
+                color: Colors.white,
               ),
             ),
           ),

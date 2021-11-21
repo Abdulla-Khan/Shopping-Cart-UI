@@ -15,6 +15,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+List<ShoeModel> l = [];
+
 class _HomePageState extends State<HomePage> {
   List<ShoeModel> shoeList = ShoeModel.list;
   @override
@@ -24,7 +26,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => CartScreen()));
+            },
             icon: Icon(Icons.favorite),
           ),
         ],
@@ -183,11 +188,9 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (_) =>
-                                              CartScreen(shoeList[index])));
+                                  setState(() {
+                                    l.add(shoeList[index]);
+                                  });
                                 },
                                 child: Icon(Icons.shopping_cart_outlined),
                               )

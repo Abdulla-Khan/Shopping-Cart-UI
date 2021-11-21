@@ -5,8 +5,6 @@ import 'package:hackathon/pages/home_page.dart';
 import 'detail_page.dart';
 
 class CartScreen extends StatefulWidget {
-  final ShoeModel shoeModel;
-  CartScreen(this.shoeModel);
   @override
   _CartScreenState createState() => _CartScreenState();
 }
@@ -46,10 +44,9 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                     child: Row(
                       children: <Widget>[
-                        GestureDetector(child: Icon(Icons.favorite)),
                         Image(
-                          image: AssetImage(widget.shoeModel.imgPath),
-                          width: 100,
+                          image: AssetImage('assets/${l[index].imgPath}'),
+                          width: 60,
                           height: 60,
                         ),
                         SizedBox(width: 16),
@@ -60,7 +57,7 @@ class _CartScreenState extends State<CartScreen> {
                               Container(
                                 width: MediaQuery.of(context).size.width * .4,
                                 child: Text(
-                                  "${widget.shoeModel.name}",
+                                  "${l[index].name}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -70,7 +67,7 @@ class _CartScreenState extends State<CartScreen> {
                                 ),
                               ),
                               Text(
-                                "${widget.shoeModel.brand}",
+                                "${l[index].brand}",
                                 style: TextStyle(
                                   color: Colors.black26,
                                   height: 1.5,
@@ -81,7 +78,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                         Container(
                           child: Text(
-                            "\$${widget.shoeModel.price.toInt()}",
+                            "\$${l[index].price.toInt()}",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
@@ -93,11 +90,9 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                         IconButton(
                             onPressed: () {
-                              l.removeAt(index);
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => HomePage()));
+                              setState(() {
+                                l.removeAt(index);
+                              });
                             },
                             icon: Icon(Icons.delete))
                       ],
